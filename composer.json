@@ -1,0 +1,30 @@
+{
+    "name": "zahzah/module-anatomy",
+    "description": "module for anatomical master data",
+    "type": "package",
+    "require": {
+        "zahzah/laravel-support": "1.x",
+        "gii/module-examination": "1.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zahzah\\ModuleAnatomy\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zahzah\\ModuleAnatomy\\ModuleAnatomyServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "Hamzah Nur Al Falah",
+            "email": "hamzahnuralfalah@gmail.com"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": false
+}
