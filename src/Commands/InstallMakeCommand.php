@@ -1,8 +1,9 @@
 <?php
 
-namespace Zahzah\ModuleAnatomy\Commands;
+namespace Hanafalah\ModuleAnatomy\Commands;
 
-class InstallMakeCommand extends EnvironmentCommand{
+class InstallMakeCommand extends EnvironmentCommand
+{
     /**
      * The name and signature of the console command.
      *
@@ -23,7 +24,7 @@ class InstallMakeCommand extends EnvironmentCommand{
      */
     public function handle()
     {
-        $provider = 'Zahzah\ModuleAnatomy\ModuleAnatomyServiceProvider';
+        $provider = 'Hanafalah\ModuleAnatomy\ModuleAnatomyServiceProvider';
 
         $this->callSilent('vendor:publish', [
             '--provider' => $provider,
@@ -35,12 +36,12 @@ class InstallMakeCommand extends EnvironmentCommand{
         $this->callSilent('migrate', [
             '--path' => $migrations
         ]);
-        
+
         $this->callSilent('migrate', [
             '--path' => $migrations
         ]);
         $this->info('✔️  Module Anatomy tables migrated');
 
-        $this->comment('zahzah/module-anatomy installed successfully.');
+        $this->comment('hanafalah/module-anatomy installed successfully.');
     }
 }

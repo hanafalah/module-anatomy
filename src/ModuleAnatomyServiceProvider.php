@@ -1,8 +1,8 @@
 <?php
 
-namespace Zahzah\ModuleAnatomy;
+namespace Hanafalah\ModuleAnatomy;
 
-use Zahzah\LaravelSupport\Providers\BaseServiceProvider;
+use Hanafalah\LaravelSupport\Providers\BaseServiceProvider;
 
 class ModuleAnatomyServiceProvider extends BaseServiceProvider
 {
@@ -14,20 +14,21 @@ class ModuleAnatomyServiceProvider extends BaseServiceProvider
     public function register()
     {
         $this->registerMainClass(ModuleAnatomy::class)
-             ->registerCommandService(Providers\CommandServiceProvider::class)
-             ->registers([           
+            ->registerCommandService(Providers\CommandServiceProvider::class)
+            ->registers([
                 '*',
-                'Services'  => function(){
+                'Services'  => function () {
                     $this->binds([
                         Contracts\ModuleAnatomy::class => ModuleAnatomy::class,
                         Contracts\Anatomy::class       => Schemas\Anatomy::class
                     ]);
                 }
             ]);
-        $this->setupExaminationLists();    
+        $this->setupExaminationLists();
     }
 
-    private function setupExaminationLists(): self{
+    private function setupExaminationLists(): self
+    {
         $examination_lists = config('database.examinations', []);
         $lists = config('module-anatomy.examinations', []);
         $examination_lists = array_merge($examination_lists, $lists);
@@ -35,11 +36,13 @@ class ModuleAnatomyServiceProvider extends BaseServiceProvider
         return $this;
     }
 
-    protected function dir(): string{
-        return __DIR__.'/';
+    protected function dir(): string
+    {
+        return __DIR__ . '/';
     }
 
-    protected function migrationPath(string $path = ''): string{
+    protected function migrationPath(string $path = ''): string
+    {
         return database_path($path);
     }
 }

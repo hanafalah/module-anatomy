@@ -1,9 +1,10 @@
 <?php
 
-namespace Zahzah\ModuleAnatomy\Contracts;
+namespace Hanafalah\ModuleAnatomy\Contracts;
 
-use Zahzah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\DataManagement;
 
-interface Anatomy extends DataManagement{
+interface Anatomy extends DataManagement
+{
     public function viewAnatomyList(): array;
 }

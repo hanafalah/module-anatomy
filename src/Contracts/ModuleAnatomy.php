@@ -1,9 +1,7 @@
 <?php
 
-namespace Zahzah\ModuleAnatomy\Contracts;
+namespace Hanafalah\ModuleAnatomy\Contracts;
 
-use Zahzah\LaravelSupport\Contracts\DataManagement;
+use Hanafalah\LaravelSupport\Contracts\DataManagement;
 
-interface ModuleAnatomy extends DataManagement{
-    
-}
+interface ModuleAnatomy extends DataManagement {}

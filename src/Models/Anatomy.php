@@ -1,30 +1,38 @@
 <?php
 
-namespace Zahzah\ModuleAnatomy\Models;
+namespace Hanafalah\ModuleAnatomy\Models;
 
-use Gii\ModuleExamination\Resources\Anatomy\ViewAnatomy;
+use Hanafalah\ModuleExamination\Resources\Anatomy\ViewAnatomy;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Zahzah\LaravelHasProps\Concerns\HasProps;
-use Zahzah\LaravelSupport\Models\BaseModel;
+use Hanafalah\LaravelHasProps\Concerns\HasProps;
+use Hanafalah\LaravelSupport\Models\BaseModel;
 
-class Anatomy extends BaseModel {
+class Anatomy extends BaseModel
+{
     use SoftDeletes, HasProps;
 
     protected $list = [
-        'id', 'name', 'morph', 'props'
+        'id',
+        'name',
+        'morph',
+        'props'
     ];
 
-    public function toViewApi(){
+    public function toViewApi()
+    {
         return new ViewAnatomy($this);
     }
 
-    public function toShowApi(){
+    public function toShowApi()
+    {
         return new ViewAnatomy($this);
     }
 
-    public function form(){
+    public function form()
+    {
         return $this->hasOneThroughModel(
-            'Form', 'FormHasAnatomy',
+            'Form',
+            'FormHasAnatomy',
             $this->getForeignKey(),
             $this->FormModel()->getKeyName(),
             $this->getKeyName(),

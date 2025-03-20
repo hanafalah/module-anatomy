@@ -1,20 +1,20 @@
 {
-    "name": "zahzah/module-anatomy",
+    "name": "hanafalah/module-anatomy",
     "description": "module for anatomical master data",
     "type": "package",
     "require": {
-        "zahzah/laravel-support": "1.x",
-        "gii/module-examination": "1.x"
+        "hanafalah/laravel-support": "1.x",
+        "hanafalah/module-examination": "1.x"
     },
     "autoload": {
         "psr-4": {
-            "Zahzah\\ModuleAnatomy\\": "src/"
+            "Hanafalah\\ModuleAnatomy\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Zahzah\\ModuleAnatomy\\ModuleAnatomyServiceProvider"
+                "Hanafalah\\ModuleAnatomy\\ModuleAnatomyServiceProvider"
             ]
         }
     },

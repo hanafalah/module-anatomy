@@ -1,9 +1,7 @@
 <?php
 
-namespace Zahzah\ModuleAnatomy;
+namespace Hanafalah\ModuleAnatomy;
 
-use Zahzah\LaravelSupport\Supports\PackageManagement;
+use Hanafalah\LaravelSupport\Supports\PackageManagement;
 
-class ModuleAnatomy extends PackageManagement implements Contracts\ModuleAnatomy{
-
-}
+class ModuleAnatomy extends PackageManagement implements Contracts\ModuleAnatomy {}

@@ -1,7 +1,9 @@
 <?php
 
-use Zahzah\ModuleAnatomy\{
-    Models, Schemas, Contracts
+use Hanafalah\ModuleAnatomy\{
+    Models,
+    Schemas,
+    Contracts
 };
 
 return [
