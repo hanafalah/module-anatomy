@@ -16,6 +16,10 @@ return [
             'schema' => Schemas\Anatomy::class
         ]
     ],
+    'libs' => [
+        'model' => 'Models',
+        'contract' => 'Contracts'
+    ],
     'database' => [
         'models' => [
             'Anatomy' => Models\Anatomy::class
